@@ -29,6 +29,6 @@ npm i
 ### Invite
 **[Add Me](https://discord.com/oauth2/authorize?client_id=675877051328102400&scope=bot&permissions=1903619198)**
 ### Autor:
-**@! Cloudyy#0001 ou ID: 415663316854112256**
+@! Cloudyy#0001 ou ID: 415663316854112256
 
 ### Contribuintes:
