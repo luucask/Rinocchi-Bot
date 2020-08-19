@@ -10,6 +10,7 @@ firebase [Database | Opcional]
 discord.js [v12]
 fs
 moment
+ascii-table
 ```
 **Opcionais:**
 ```
