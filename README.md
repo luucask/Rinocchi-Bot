@@ -1,7 +1,7 @@
 # Rinocchi | Repositório
 
 ## Códigos para estudo
-**Os códigos são para finalidade de estudo, então por favor leia e interprete os códigos.**
+ Os códigos são para estudo, então você pode utilizar adaptando como quiser, porém certifique-se de interpretar o código.
 
 ## Dependências:
 
