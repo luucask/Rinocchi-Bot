@@ -30,6 +30,7 @@ npm i
  Algumas das APIs usadas:
 ```
 nekos.life [image API]
+api.alexflipnote.dev/color/ [HEX color API]
 ```
  *Não inclusas no projeto o protótipo da API da Rinocchi e NSFW*
 
