@@ -31,6 +31,7 @@ npm i
 ```
 nekos.life [image API]
 api.alexflipnote.dev/color/ [HEX color API]
+kitsu.io/api/edge/ [Mangá / Anime Info API]
 ```
  *Não inclusas no projeto o protótipo da API da Rinocchi e NSFW*
 
