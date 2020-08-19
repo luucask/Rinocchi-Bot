@@ -66,12 +66,15 @@ message.channel.send("Oi").then(msg => {
 const Discord = require("discord.js");
 let embed = new Discord.MessageEmbed()
 .setTitle('Embed 1")
-message.channel.send("Oi").then(msg => {
+//Enviamos a embed
+message.channel.send(embed).then(msg => {
     msg.react("✅")
     let filtro = (reaction, usuario) => reaction.emoji.name === "✅" && usuario.id === message.author.id;
     let coletor = msg.createReactionCollector(filtro, { max: 1 });
     coletor.on("collect", cp => {
-       msg.edit("Funcionou!!! 🎉🎉🎉")
+       let embed2 = new Discord.MessageEmbed()
+       .setTitle("Esse é o embed 2")
+       msg.edit(embed2)
   });
 });
 ```
