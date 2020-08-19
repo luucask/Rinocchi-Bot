@@ -20,7 +20,7 @@ node-superfetch
 ```
 ## Instalação:
 ```
-npm i
+npm i [lib]
 ```
 
 ### .env info:
