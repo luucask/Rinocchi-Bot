@@ -21,14 +21,14 @@ message.channel.send("Oi").then(msg => {
 > E depois iremos adicionar as reações que queremos na mensagem:
 
 ```javascript
-message.channel.send("Oi".then(msg => {
+message.channel.send("Oi").then(msg => {
     msg.react("✅")
 });
 ```
 > E então, iremos criar o filtro, que saberá quem clicou na reação:
 
 ```javascript
-message.channel.send("Oi".then(msg => {
+message.channel.send("Oi").then(msg => {
     msg.react("✅")
     let filtro = (reaction, usuario) => reaction.emoji.name === "✅" && usuario.id === message.author.id;
 });
@@ -38,7 +38,7 @@ message.channel.send("Oi".then(msg => {
 > Depois, iremos criar o coletor, usando o filtro:
 
 ```javascript
-message.channel.send("Oi".then(msg => {
+message.channel.send("Oi").then(msg => {
     msg.react("✅")
     let filtro = (reaction, usuario) => reaction.emoji.name === "✅" && usuario.id === message.author.id;
     let coletor = msg.createReactionCollector(filtro, { max: 1 });
@@ -48,7 +48,25 @@ message.channel.send("Oi".then(msg => {
 > Executando a ação quando esse coletor se ativar:
 
 ```javascript
-message.channel.send("Oi".then(msg => {
+message.channel.send("Oi").then(msg => {
+    msg.react("✅")
+    let filtro = (reaction, usuario) => reaction.emoji.name === "✅" && usuario.id === message.author.id;
+    let coletor = msg.createReactionCollector(filtro, { max: 1 });
+    coletor.on("collect", cp => {
+       msg.edit("Funcionou!!! 🎉🎉🎉")
+  });
+});
+```
+*Depois do usuário reagir, ele irá editar a mensagem.*
+
+### Posso usar em embeds??
+ Sim, você pode. O método é o mesmo, mas eu irei demostrar, pois algumas pessoas sempre tem dúvidas sobre o uso correto:
+
+```javascript
+const Discord = require("discord.js");
+let embed = new Discord.MessageEmbed()
+.setTitle('Embed 1")
+message.channel.send("Oi").then(msg => {
     msg.react("✅")
     let filtro = (reaction, usuario) => reaction.emoji.name === "✅" && usuario.id === message.author.id;
     let coletor = msg.createReactionCollector(filtro, { max: 1 });
