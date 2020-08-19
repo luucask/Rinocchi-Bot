@@ -30,7 +30,9 @@ message.channel.send("Oi".then(msg => {
 ```javascript
 message.channel.send("Oi".then(msg => {
     msg.react("✅")
-    let filtro = (reaction, usuario) =>
-           reaction.emoji.name === "✅" && usuario.id === message.author.id;
+    let filtro = (reaction, usuario) => reaction.emoji.name === "✅" && usuario.id === message.author.id;
 });
 ```
+*Nesse filtro ele vai basicamente responder a apenas uma menção e apenas quando o autor da mensagem reagir, ele irá realizar determinada função.*
+
+
