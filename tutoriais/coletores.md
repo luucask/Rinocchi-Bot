@@ -79,4 +79,19 @@ message.channel.send(embed).then(msg => {
 });
 ```
 
+### ⚠️ Aviso:
+> Você deve ficar atento se a mensagem que vai ser enviada/editada depois do usuário reagir **deve ficar dentro dos `({})` do coletor.**
+
+### Emojis customizados nas reações:
+ Assim como nas mensagens embed e comum, precisamos do **ID do emoji**, só que nos coletores tem uma "pegadinha".
+
+##### Recapitulando...
+ Os IDs de emojis Discord são códigos assim: 
+```javascript
+<a:triggered:736337095655948318>
+```
+ ![emoji](https://cdn.discordapp.com/attachments/724803884173754399/745774179285991444/triggered.gif)
+
+### Diferença:
+
 
