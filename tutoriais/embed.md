@@ -75,4 +75,4 @@ let embed = new Discord.MessageEmbed()
 .setURL("url")
 ```
 ### Mais usos da embed
-[🔗 Coletores]()
+[🔗 Coletores](https://github.com/CloudyyUw/Rinocchi-Bot/blob/master/tutoriais/coletores.md)
