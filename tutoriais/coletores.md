@@ -35,4 +35,27 @@ message.channel.send("Oi".then(msg => {
 ```
 *Nesse filtro ele vai basicamente responder a apenas uma menção e apenas quando o autor da mensagem reagir, ele irá realizar determinada função.*
 
+> Depois, iremos criar o coletor, usando o filtro:
+
+```javascript
+message.channel.send("Oi".then(msg => {
+    msg.react("✅")
+    let filtro = (reaction, usuario) => reaction.emoji.name === "✅" && usuario.id === message.author.id;
+    let coletor = msg.createReactionCollector(filtro, { max: 1 });
+});
+```
+
+> Executando a ação quando esse coletor se ativar:
+
+```javascript
+message.channel.send("Oi".then(msg => {
+    msg.react("✅")
+    let filtro = (reaction, usuario) => reaction.emoji.name === "✅" && usuario.id === message.author.id;
+    let coletor = msg.createReactionCollector(filtro, { max: 1 });
+    coletor.on("collect", cp => {
+       msg.edit("Funcionou!!! 🎉🎉🎉")
+  });
+});
+```
+
 
