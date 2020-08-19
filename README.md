@@ -26,6 +26,13 @@ npm i
 ### .env info:
  Você pode colocar informações importantes e confidenciais em um arquivo **.env**.
 
+### APIs:
+ Algumas das APIs usadas:
+```
+nekos.life [image API]
+```
+ *Não inclusas no projeto o protótipo da API da Rinocchi e NSFW*
+
 ### Invite
 **[Add Me](https://discord.com/oauth2/authorize?client_id=675877051328102400&scope=bot&permissions=1903619198)**
 ### Autor:
