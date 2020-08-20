@@ -163,16 +163,24 @@ message.channel.send("Escolha um Nickname aventureiro!").then(msg => {
        .on('collect', nickname => {
       const Nick = nickname.content
       // Criando um novo coletor
-      let coletor2 = message.channel.reateMessageCollector(x => x.author.id === message.author.id, {max: 1})
-        .on('collect', classe => {
-          const Uclass = classe.content
-          message.channel.send(`Você escolheu o Nickname ${Nick}\nE escolheu a classe ${Uclass}`)
+      message.channel.send("Agora, escolha uma classe").then(msg2 => {
+        let coletor 2 = message.channel.createMessageCollector(x => x.author.id === message.author.id, {max:1})
+            .on('collect', classe => {
+         const UserClass = classe.content
+         //Enviamos todas as informações recolhidas.
+          message.reply(`Você escolheu o nickname ${Nick} e a classe ${UserClass}`)
+      });
+     });
     });
   });
 });
 ```
 
  Pronto, esses são os coletores de mensagem e de reações de uma forma simplificada.
+
+> Notas:
+
+> Nos dois coletores, você deve ficar atento ao fechamento de chaves e parênteses, pois pode dar algum erro.
 
 > Tutorial em formato de vídeo que eu encontrei:
 
