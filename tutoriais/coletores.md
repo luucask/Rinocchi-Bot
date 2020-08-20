@@ -93,5 +93,7 @@ message.channel.send(embed).then(msg => {
  ![emoji](https://cdn.discordapp.com/attachments/724803884173754399/745774179285991444/triggered.gif)
 
 ### Diferença:
+ A diferença é que você vai precisar apenas do "ID numérico".
 
+ Ou seja, nesse caso `736337095655948318`
 
