@@ -33,7 +33,7 @@ message.channel.send("Oi").then(msg => {
     let filtro = (reaction, usuario) => reaction.emoji.name === "✅" && usuario.id === message.author.id;
 });
 ```
-*Nesse filtro ele vai basicamente responder a apenas uma menção e apenas quando o autor da mensagem reagir, ele irá realizar determinada função.*
+*Nesse filtro ele vai basicamente responder a apenas uma reação e apenas quando o autor da mensagem reagir, ele irá realizar determinada função.*
 
 > Depois, iremos criar o coletor, usando o filtro:
 
