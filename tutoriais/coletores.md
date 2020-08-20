@@ -115,3 +115,65 @@ message.channel.send(embed).then(msg => {
 });
 ```
 > As mudanças são você trocar o `msg.react("")` para o ID e no filtro será `reaction.emoji.id`
+
+## MessageCollector
+
+### Código:
+
+> Vamos enviar uma mensagem para que o usuário saiba o que responder:
+
+```javascript
+message.channel.send("Escolha um Nickname aventureiro!")
+```
+
+> Novamente iremos usar o `.then` para "nomear" a mensagem:
+
+```javascript
+message.channel.send("Escolha um Nickname aventureiro!").then(msg => {
+
+});
+```
+
+> Agora, o filtro e o coletor:
+
+```javascript
+message.channel.send("Escolha um Nickname aventureiro!").then(msg => {
+  let coletor = message.channel.createMessageCollector(x => x.author.id === message.author.id, {max:1})
+       .on('collect', nickname => {
+  });
+});
+```
+
+> Depois disso, nós iremos pegar essa informação e enviar no canal para confirmar:
+
+```javascript
+message.channel.send("Escolha um Nickname aventureiro!").then(msg => {
+  let coletor = message.channel.createMessageCollector(x => x.author.id === message.author.id, {max:1})
+       .on('collect', nickname => {
+      const Nick = nickname.content
+      message.channel.send(`Você escolheu o Nickname: ${Nick}`)
+  });
+});
+```
+> Você também pode colocar mais de um coletor, sendo que ele irá ir em ordem, um exemplo:
+
+```javascript
+message.channel.send("Escolha um Nickname aventureiro!").then(msg => {
+  let coletor = message.channel.createMessageCollector(x => x.author.id === message.author.id, {max:1})
+       .on('collect', nickname => {
+      const Nick = nickname.content
+      // Criando um novo coletor
+      let coletor2 = message.channel.reateMessageCollector(x => x.author.id === message.author.id, {max: 1})
+        .on('collect', classe => {
+          const Uclass = classe.content
+          message.channel.send(`Você escolheu o Nickname ${Nick}\nE escolheu a classe ${Uclass}`)
+    });
+  });
+});
+```
+
+ Pronto, esses são os coletores de mensagem e de reações de uma forma simplificada.
+
+> Tutorial em formato de vídeo que eu encontrei:
+
+[🔗 Vídeo](https://youtu.be/TujRpqPUE-U)
