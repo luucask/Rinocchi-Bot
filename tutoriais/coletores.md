@@ -97,3 +97,21 @@ message.channel.send(embed).then(msg => {
 
  Ou seja, nesse caso `736337095655948318`
 
+##### Código:
+```javascript
+const Discord = require("discord.js");
+let embed = new Discord.MessageEmbed()
+.setTitle('Embed 1")
+//Enviamos a embed
+message.channel.send(embed).then(msg => {
+    msg.react(`736337095655948318`) // agora iremos reagir com o id
+    let filtro = (reaction, usuario) => reaction.emoji.id === "736337095655948318" && usuario.id === message.author.id; // agora é reaction.emoji.id
+    let coletor = msg.createReactionCollector(filtro, { max: 1 });
+    coletor.on("collect", cp => {
+       let embed2 = new Discord.MessageEmbed()
+       .setTitle("Esse é o embed 2")
+       msg.edit(embed2)
+  });
+});
+```
+> As mudanças são você trocar o `msg.react("")` para o ID e no filtro será `reaction.emoji.id`
