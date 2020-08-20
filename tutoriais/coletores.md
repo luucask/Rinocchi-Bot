@@ -155,6 +155,21 @@ message.channel.send("Escolha um Nickname aventureiro!").then(msg => {
   });
 });
 ```
+
+> Um exemplo de uso é usar o coletor de mensagens para substituir o uso do `args[]` e/ou fazer uma verificação:
+
+```javascript
+message.channel.send("Digite `confirmar` para confirmar o banimento.").then(msg => {
+  let coletor = message.channel.createMessageCollector(x => x.author.id === message.author.id, {max:1})
+       .on('collect', confirm => {
+      const Mensagem = confirm.content
+      if(!Mensagem === 'confirmar') return message.reply("Você não confirmou a punição")
+      // Aqui é o mesmo papel do else
+      message.channel.send("usuário punido")
+  });
+});
+```
+
 > Você também pode colocar mais de um coletor, sendo que ele irá ir em ordem, um exemplo:
 
 ```javascript
