@@ -41,3 +41,4 @@ kitsu.io/api/edge/ [Mangá / Anime Info API]
 @! Cloudyy#0001 ou ID: 415663316854112256
 
 ### Contribuintes:
+*Torne-se um se quiser!*
