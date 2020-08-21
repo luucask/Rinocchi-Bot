@@ -38,7 +38,7 @@ kitsu.io/api/edge/ [Mangá / Anime Info API]
 ### Invite
 **[Add Me](https://discord.com/oauth2/authorize?client_id=675877051328102400&scope=bot&permissions=1903619198)**
 ### Autor:
-@! Cloudyy#0001 ou ID: 415663316854112256
+`@! Cloudyy#8103` ou `ID: 415663316854112256`
 
 ### Contribuintes:
 *Torne-se um se quiser!*
