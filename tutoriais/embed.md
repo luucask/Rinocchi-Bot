@@ -63,16 +63,20 @@ let embed = new Discord.MessageEmbed()
 
 ### .set:
  Há várias "terminações", implementando cada vez mais sua embed:
-```javascript
-.setTitle('')
-.setDescription('')
-.setColor('') //em hex ou o nome da cor em inglês
-.setFooter('', img_url.png) //caso queira um ícone, se não quiser deixe apenas o texto sem a vírgula.
-.setImage("img_url.png")
-.setThumbinail("img_url.png")
-.setAuthor()
-.addField("Texto 1", "Texto 2")
-.setURL("url")
-```
+
+> Lista dos elementos de uma embed
+.set & add   | Info | Texto
+------------ | ------------- | -------------
+.setTitle | Adiciona um título | `('')` ou `(``)` ou uma variável
+.setDescription | Descrição, texto que vem abaixo do título | `('')` ou `(``)` ou uma variável
+.setColor | Define uma cor para a borda do embed | Pode ser o nome da cor em inglês e em caps ou em HEX, você também pode usar `RANDOM`, `(``)` ou `('')`
+.setFooter | Rodapé da embed | `('')` ou `(``)` ou uma variável, para adicionar ícones: `('', img_url)` ou `(`` , img_url)` ou uma variáve
+.setImage | Imagem principal da embed | `('')` ou `(``)` ou uma variável
+.setThumbinail | Imagem menor no canto superior direito | `('')` ou `(``)` ou uma variável
+.setAuthor | Autor, acima do título | `('' , img_url)` ou `(``, img_url)` *[img_url pode ser uma variável]*
+.addField | Adiciona um campo | `('texto 1', 'texto 2')` ou `(`texto1`, `texto 2`)` *[o texto 1 ou o 2 podem ser variáveis]*
+.setURL | Ao clicar na embed, redireciona o usuário a algum site | `('')` ou `(``)`
+
+
 ### Mais usos da embed
 [🔗 Coletores](https://github.com/CloudyyUw/Rinocchi-Bot/blob/master/tutoriais/coletores.md)
