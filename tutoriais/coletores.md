@@ -197,6 +197,16 @@ message.channel.send("Escolha um Nickname aventureiro!").then(msg => {
 
 > Nos dois coletores, você deve ficar atento ao fechamento de chaves e parênteses, pois pode dar algum erro.
 
+## Dúvidas:
+ 
+ ### Pra que serve o `coletor`?
+
+ O coletor é o responsável por "ligar" quando a reação for adicionada ou a mensagem for enviada.
+ 
+ Uma comparação é com o nosso `client`, ele se ativa com vários eventos, como `GuildMemberAdd`, `message`, etc. Só que nesse caso o evento é determinado pelo filtro.
+
+ Espero ter esclarecido suas dúvidas, caso tenha mais alguma, entre em contato que eu irei tentar te explicar e adicionar ela aqui.
+
 > Tutorial em formato de vídeo que eu encontrei:
 
 [🔗 Vídeo](https://youtu.be/TujRpqPUE-U)
