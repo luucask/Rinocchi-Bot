@@ -64,7 +64,9 @@ let embed = new Discord.MessageEmbed()
 ### .set:
  Há várias "terminações", implementando cada vez mais sua embed:
 
-> Lista dos elementos de uma embed
+> Lista dos elementos de uma embed:
+
+
 .set & add   | Info | Texto
 ------------ | ------------- | -------------
 .setTitle | Adiciona um título | `('')` ou `(``)` ou uma variável
