@@ -56,7 +56,7 @@
  //Log
  console.log(SetName)
 ```
-*Retorna: "texto*, 1, ~~200~~
+*Retorna: "texto", 1, ~~200~~*
 
  Esse são exemplos básicos, você pode ler mais em [Developer.Mozilla](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Set)
 
