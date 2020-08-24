@@ -64,7 +64,7 @@
  Para colocar uma limitação de usos por um determinado período usando um `Set` é bem simples:
 
 ```javascript
-  let MSet = new Set()
+  const MSet = new Set() // isso deve ficar no topo do código, não dentro de qualquer função.
   if(MSet.has(message.author.id)) return message.reply("você está executando os comandos rápido de mais!")
   if(!MSet.has(message.author.id)){
     MSet.add(message.author.id)
