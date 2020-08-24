@@ -65,12 +65,13 @@
 
 ```javascript
   const MSet = new Set() // isso deve ficar no topo do código, não dentro de qualquer função.
-  if(MSet.has(message.author.id)) return message.reply("você está executando os comandos rápido de mais!")
-  if(!MSet.has(message.author.id)){
-    MSet.add(message.author.id)
+  if (MSet.has(message.author.id)){
+  return message.reply("você está executando os comandos rápido de mais!")
+  } else {
+  MSet.add(message.author.id)
   }
   setTimeout(() => {
-     MSet.delete(message.author.id)
+  MSet.delete(message.author.id)
   }, tempo em milissegundos)
 ```
  Esse é um exemplo de cooldown para comandos que você pode usar diretamente no `client.on('message')` ou em apenas comandos específicos.
